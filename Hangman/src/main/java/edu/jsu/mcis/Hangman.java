@@ -20,17 +20,18 @@ public class Hangman {
     
     public boolean available(char c) {
 		int count = 0;
-		while(count < usedLetters.size())
+		for(int i = 0; i < usedLetters.size(); i++)
 		{
-			if(usedLetters.get(count) == c)
+			if(usedLetters.get(i) == c)
 			{
 				return false;
 			}
 		}
 		return true;
     }
-    
+	
     public int guess(char c) {
+		usedLetters.add(c);
 		int occurs = 0;
 		for(int i = 0; i < word.length(); i++)
 		{
@@ -43,7 +44,7 @@ public class Hangman {
     }
     
     public Result getResult() {
-        return Result.NONE;
+        return Result.WIN;
     }
     
 }

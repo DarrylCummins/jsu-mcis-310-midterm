@@ -60,7 +60,8 @@ public class HangmanTest {
     // test pass correctly.
     @Test
     public void testGuessingEveryLetterBeforeSixMissesCausesAWin() {
-        assertTrue(false);
+        
+		assertTrue(false);
     }
     
 }
