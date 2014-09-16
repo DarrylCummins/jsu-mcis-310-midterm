@@ -40,11 +40,21 @@ public class Hangman {
 				occurs++;
 			}
 		}
+		//checkResult();
         return occurs;
     }
     
+/*	public void checkResult()
+	{
+		int count = 0;
+		for (int i = 0; i < usedLetters.size(); i++)
+		{
+			if(usedLetters.get(i) 
+		}	
+	}*/
     public Result getResult() {
-        return Result.WIN;
+	
+        return Result.LOSE;
     }
     
 }

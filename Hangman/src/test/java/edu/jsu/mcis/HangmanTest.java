@@ -4,7 +4,6 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class HangmanTest {
-    
     // Exam Question 1
     // Implement the Hangman available() method to make this 
     // unit test pass correctly.
@@ -50,6 +49,14 @@ public class HangmanTest {
     // test pass correctly.
     @Test
     public void testSixOrMoreMissesCausesALoss() {
+		Hangman h = new Hangman();
+        h.setWord("inconceivable");
+        int numOccurrences1 = h.guess('d');
+        int numOccurrences2 = h.guess('f');
+        int numOccurrences3 = h.guess('g');
+        int numOccurrences4 = h.guess('h');
+        int numOccurrences5 = h.guess('k');
+        int numOccurrences6 = h.guess('p');
         assertTrue(false);
     }
     
