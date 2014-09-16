@@ -31,8 +31,15 @@ public class Hangman {
     }
     
     public int guess(char c) {
-		
-        return numGuesses;
+		int occurs = 0;
+		for(int i = 0; i < word.length(); i++)
+		{
+			if(word.charAt(i) == c)
+			{
+				occurs++;
+			}
+		}
+        return occurs;
     }
     
     public Result getResult() {
