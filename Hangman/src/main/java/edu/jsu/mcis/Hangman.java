@@ -6,10 +6,12 @@ public class Hangman {
     public enum Result { WIN, LOSE, NONE };
     private String word;
     private List<Character> usedLetters;
+	private int numGuesses;
     
     public Hangman() {
         word = "";
         usedLetters = new ArrayList<Character>();
+		numGuesses = 0;
     }
     
     public void setWord(String word) {
@@ -17,11 +19,20 @@ public class Hangman {
     }
     
     public boolean available(char c) {
-        return true;
+		int count = 0;
+		while(count < usedLetters.size())
+		{
+			if(usedLetters.get(count) == c)
+			{
+				return false;
+			}
+		}
+		return true;
     }
     
     public int guess(char c) {
-        return 2;
+		
+        return numGuesses;
     }
     
     public Result getResult() {
